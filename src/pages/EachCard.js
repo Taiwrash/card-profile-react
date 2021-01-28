@@ -31,76 +31,78 @@ const EachCard = () => {
   return (
     <>
       <SearchSection filterItems={filterItems} allItems={search} />
-      {detail.map((profile) => {
-        const {
-          CreditCardNumber,
-          CreditCardType,
-          DomainName,
-          Email,
-          FirstName,
-          Gender,
-          LastLogin,
-          LastName,
-          Latitude,
-          Longitude,
-          MacAddress,
-          PaymentMethod,
-          PhoneNumber,
-          UserName,
-          URL,
-        } = profile;
+      <div className="grandparent">
+        {detail.map((profile) => {
+          const {
+            CreditCardNumber,
+            CreditCardType,
+            DomainName,
+            Email,
+            FirstName,
+            Gender,
+            LastLogin,
+            LastName,
+            Latitude,
+            Longitude,
+            MacAddress,
+            PaymentMethod,
+            PhoneNumber,
+            UserName,
+            URL,
+          } = profile;
 
-        return (
-          <div className="hmmm">
-            <section className="container">
-              <div className="parent">
-                <div className="front-page">
-                  <p>
-                    <span>Names: </span> {FirstName + "   " + LastName}
-                  </p>
-                  <p>
-                    <span>Username: </span> {UserName} | <span>Gender: </span>
-                    {Gender}
-                  </p>
-                  <p>
-                    <span>Email: </span>
-                    {Email}
-                  </p>
-                  <div className="card-type">
+          return (
+            <div className="hmmm">
+              <section className="container">
+                <div className="parent">
+                  <div className="front-page">
                     <p>
-                      <a href={`${URL}`} target="_blank">
-                        Portfolio
-                      </a>
-                    </p>
-                    <p>{CreditCardType}</p>
-                  </div>
-                  <p>
-                    <span>Phone Number: </span>
-                    {PhoneNumber}
-                  </p>
-                </div>
-                <div className="back-page">
-                  <p className="card-number">{CreditCardNumber}</p>
-                  <div className="back-bottom">
-                    <p>
-                      <span>Payment Method: </span>
-                      {PaymentMethod}
+                      <span>Names: </span> {FirstName + "   " + LastName}
                     </p>
                     <p>
-                      <span>Domian Name: </span>
-                      {DomainName}
+                      <span>Username: </span> {UserName} | <span>Gender: </span>
+                      {Gender}
                     </p>
-                    <p className="last-login">
-                      <span>Last Login: </span>
-                      {LastLogin}
+                    <p>
+                      <span>Email: </span>
+                      {Email}
+                    </p>
+                    <div className="card-type">
+                      <p>
+                        <a href={`${URL}`} target="_blank">
+                          Portfolio
+                        </a>
+                      </p>
+                      <p>{CreditCardType}</p>
+                    </div>
+                    <p>
+                      <span>Phone Number: </span>
+                      {PhoneNumber}
                     </p>
                   </div>
+                  <div className="back-page">
+                    <p className="card-number">{CreditCardNumber}</p>
+                    <div className="back-bottom">
+                      <p>
+                        <span>Payment Method: </span>
+                        {PaymentMethod}
+                      </p>
+                      <p>
+                        <span>Domian Name: </span>
+                        {DomainName}
+                      </p>
+                      <p className="last-login">
+                        <span>Last Login: </span>
+                        {LastLogin}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
-        );
-      })}
+              </section>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };

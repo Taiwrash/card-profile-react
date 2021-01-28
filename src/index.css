@@ -196,7 +196,7 @@ header h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .hmmm {
+  .grandparent {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
