@@ -7,7 +7,7 @@ const SearchSection = ({ allItems, filterItems }) => {
         <input type="text" autoFocus />
       </div>
       <div className="filter-buttons">
-        <p>filter by card type</p>
+        <p>filter by payment method</p>
         <div className="btn">
           {allItems.map((button) => {
             return (
